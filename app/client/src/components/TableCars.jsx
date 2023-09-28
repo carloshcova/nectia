@@ -44,8 +44,8 @@ export default function TableCars({cars}) {
         const rowData = row.original
         return (
         <p className='flex gap-x-4 items-center'>
-          <button onClick={ () => deleteCar(rowData._id) } className='px-4 py-1 border border-[#F6A11B] font-semibold rounded hover:bg-zinc-800 transition-all'>delete</button>
-          <Link to={`/cars/${rowData._id}`} className='px-4 py-1 border border-[#13BAE6] font-semibold rounded hover:bg-zinc-800 transition-all'>edit</Link>  
+          <button onClick={ () => deleteCar(rowData._id) } className='px-4 py-1 border border-[#F6A11B] font-semibold rounded hover:bg-zinc-800 transition-all'>eliminar</button>
+          <Link to={`/cars/${rowData._id}`} className='px-4 py-1 border border-[#13BAE6] font-semibold rounded hover:bg-zinc-800 transition-all'>editar</Link>  
         </p>)
       }
       
@@ -136,25 +136,25 @@ export default function TableCars({cars}) {
                 <button 
                   className="flex items-center justify-center px-3 h-8 ml-0 leading-tight bg-zinc-800 text-zinc-200 hover:bg-zinc-500 hover:text-zinc-100 border border-gray-300 rounded-l-lg"
                   onClick={ () => table.setPageIndex(0) }
-                >First</button>
+                >Primera</button>
             </li>
             <li>
                 <button 
                   className="flex items-center justify-center px-3 h-8 leading-tight bg-zinc-800 text-zinc-200 hover:bg-zinc-500 hover:text-zinc-100 border border-gray-300 disabled:text-zinc-500 disabled:hover:bg-zinc-800"
                   disabled={!table.getCanPreviousPage()} onClick={ () => table.previousPage() }
-                >Previous</button>
+                >Anterior</button>
             </li>
             <li>
                 <button 
                   className="flex items-center justify-center px-3 h-8 leading-tight bg-zinc-800 text-zinc-200 hover:bg-zinc-500 hover:text-zinc-100 border border-gray-300 disabled:text-zinc-500 disabled:hover:bg-zinc-800"
                   disabled={!table.getCanNextPage()} onClick={ () => table.nextPage() }
-                >Next</button>
+                >Siguiente</button>
             </li>
             <li>
                 <button 
                   className="flex items-center justify-center px-3 h-8 leading-tight bg-zinc-800 text-zinc-200 hover:bg-zinc-500 hover:text-zinc-100 border border-gray-300 rounded-r-lg"
                   onClick={ () => table.setPageIndex(table.getPageCount() - 1) }
-                >Last</button>
+                >Última</button>
             </li>
         </ul>
     </nav>
