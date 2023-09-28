@@ -94,7 +94,7 @@ export default function TableCars({cars}) {
         
       </div>
 
-      <div className='overflow-x-auto mx-4'>
+      <div className='overflow-x-auto mx-4 sm:mx-0'>
       <table className='w-full text-sm text-left bg-zinc-800'>
         <thead className='text-xs uppercase bg-zinc-800 text-zinc-200'>
           {
