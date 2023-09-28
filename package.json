@@ -1,0 +1,19 @@
+{
+  "name": "nectia-app",
+  "version": "1.0.0",
+  "description": "prueba técnica fullstack",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev --no-daemon"
+  },
+  "keywords": [],
+  "author": "carlos cova",
+  "license": "ISC",
+  "workspaces": [
+    "app/*"
+  ],
+  "devDependencies": {
+    "turbo": "1.10.14"
+  }
+}
