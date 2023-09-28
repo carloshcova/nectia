@@ -16,7 +16,7 @@ export default function App() {
     <AuthProvider>
       <CarProvider>
         <BrowserRouter>
-          <main className='mx-auto w-4/5'>
+          <main className='mx-auto sm:w-4/5'>
             <NavBar />
 
             <Routes>

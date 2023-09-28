@@ -5,7 +5,7 @@ export default function NavBar() {
   const { isAuthenticated, logout } = useAuth()
 
   return (
-    <nav className='bg-[#282828] mb-10 flex justify-between px-10 rounded-lg items-center h-16'>
+    <nav className='bg-[#282828] mb-10 flex justify-between px-4 sm:px-10 rounded-lg items-center h-16'>
       <div className='flex items-center'>
         <Link to={ isAuthenticated ? '/cars' : '/' }>
           <img src="/logoblanco.svg" alt="logo nectia" className='w-[60px]' />

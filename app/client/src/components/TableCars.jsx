@@ -69,13 +69,13 @@ export default function TableCars({cars}) {
   
   return (
     <section>
-      <div className='flex items-center justify-between pb-4'>
+      <div className='flex flex-col sm:flex-row items-center justify-between pb-4'>
         <select
           value={table.getState().pagination.pageSize}
           onChange={e => {
             table.setPageSize(Number(e.target.value))
           }}
-          className='inline-flex items-center bg-zinc-800 text-zinc-200 border border-gray-300 rounded-lg text-sm px-3 py-1.5'
+          className='inline-flex items-center bg-zinc-800 text-zinc-200 border border-gray-300 rounded-lg text-sm px-3 py-1.5 mb-4 sm:mb-0'
         >
           {[10, 15, 20, 25, 30].map(pageSize => (
             <option key={pageSize} value={pageSize} className='hover:bg-zinc-500'>
@@ -94,6 +94,7 @@ export default function TableCars({cars}) {
         
       </div>
 
+      <div className='overflow-x-auto mx-4'>
       <table className='w-full text-sm text-left bg-zinc-800'>
         <thead className='text-xs uppercase bg-zinc-800 text-zinc-200'>
           {
@@ -127,8 +128,9 @@ export default function TableCars({cars}) {
           }
         </tbody>
       </table>
+      </div>
 
-      <nav className="flex items-center justify-end pt-4" aria-label="Table navigation">
+      <nav className="flex items-center justify-center sm:justify-end pt-4" aria-label="Table navigation">
         <ul className="inline-flex -space-x-px text-sm h-8">
             <li>
                 <button 
